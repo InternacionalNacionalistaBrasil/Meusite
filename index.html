@@ -1,43 +1,90 @@
-# Simple workflow for deploying static content to GitHub Pages
-name: Deploy static content to Pages
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site - Dicas de TikTok e História Comunista</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f2f5;
+            color: #333;
+        }
 
-on:
-  # Runs on pushes targeting the default branch
-  push:
-    branches: ["main"]
+        header {
+            background-color: #4051db;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
 
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+        #posts {
+            padding: 20px;
+        }
 
-# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
-permissions:
-  contents: read
-  pages: write
-  id-token: write
+        .post {
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
 
-# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
-# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
-concurrency:
-  group: "pages"
-  cancel-in-progress: false
+        .post-content {
+            font-size: 16px;
+        }
 
-jobs:
-  # Single deploy job since we're just deploying
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          # Upload entire repository
-          path: '.'
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+        .tiktok-tips, .example-tiktok, .communist-revolution {
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-top: 20px;
+        }
+
+        h2 {
+            color: #4051db;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 18px;
+            line-height: 1.5;
+        }
+
+        img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Meu Site - Dicas de TikTok e História Comunista</h1>
+    </header>
+    <section id="posts">
+        <!-- Área de postagens -->
+    </section>
+    <section class="tiktok-tips">
+        <h2>Dicas para crescer no TikTok</h2>
+        <!-- Inclua suas dicas aqui -->
+    </section>
+    <section class="example-tiktok">
+        <h2>Exemplo de TikTok</h2>
+        <img src="caminho/para/sua/imagem.jpg" alt="Exemplo de TikTok">
+    </section>
+    <section class="communist-revolution">
+        <h2>História da Revolução Comunista</h2>
+        <p>A revolução comunista, que teve origem no século XIX, foi um movimento social e político que buscava estabelecer uma sociedade sem classes e com propriedade coletiva dos meios de produção. As ideias fundamentais foram desenvolvidas por filósofos como Karl Marx e Friedrich Engels, que argumentavam que a história da humanidade era uma luta de classes entre os proprietários dos meios de produção (burguesia) e os trabalhadores (proletariado).</p>
+        <p>O ápice da revolução comunista ocorreu com a Revolução Russa de 1917, liderada pelos bolcheviques e seu líder Vladimir Lenin. Isso resultou na criação da União Soviética, o primeiro estado socialista do mundo. A partir daí, movimentos comunistas surgiram em todo o mundo, influenciando eventos históricos significativos, como a Revolução Chinesa, a Revolução Cubana e vários movimentos de libertação nacional em países colonizados.</p>
+    </section>
+    <script>
+        // Código JavaScript para interatividade, como carregar postagens, enviar comentários, etc.
+        // Você pode adicionar mais funcionalidades conforme necessário.
+    </script>
+</body>
+</html>
